@@ -8,9 +8,6 @@ A brief description of your project, its goals, and main features.
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Examples](#examples)
-- [Author](#author)
-- [License](#license)
 
 ## Description
 

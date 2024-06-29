@@ -1,0 +1,924 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Geometria";
+  src: url("/fonts/geometria_medium.otf");
+}
+@font-face {
+  font-family: "Geometria-light";
+  src: url("/fonts/geometria_light.otf");
+}
+* {
+  font-family: "Geometria";
+  padding: 0;
+  margin: 0;
+  font-family: "Geometria";
+  outline: none;
+}
+
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #000816;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 90px;
+  color: #CA92FF;
+  text-transform: uppercase;
+}
+
+h2 {
+  color: #CA92FF;
+  font-size: 70px;
+}
+
+h3 {
+  font-size: 50px;
+  color: #f0dfff;
+}
+
+p {
+  color: #E4C7FF;
+  font-size: 30px;
+}
+
+a {
+  color: #CA92FF;
+  font-size: 35px;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+textarea {
+  border: 2px solid #ca92ff;
+  border-radius: 10px;
+  width: 375px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: #00050f;
+  font-size: 35px;
+  padding-left: 15px;
+  color: #f0dfff;
+  resize: none;
+}
+
+header {
+  background-color: #00050F;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 118px;
+}
+.nav-menu__list {
+  display: flex;
+  align-items: center;
+}
+.nav-menu__list__item {
+  margin-right: 40px;
+}
+.nav-menu__list__item__link {
+  font-size: 25px;
+}
+.nav-menu__list :first-child {
+  margin-right: 0px;
+}
+.nav-menu__list :nth-child(2) {
+  margin-left: 156px;
+}
+.nav-menu__list :nth-child(6) {
+  margin-right: 180px;
+}
+.nav-menu__list :nth-child(7) {
+  margin-right: 20px;
+}
+.nav-menu__list :nth-child(8) {
+  margin-right: 0px;
+}
+
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  align-items: flex-end;
+  background-color: #00050F;
+  padding: 10px;
+}
+.burger-menu__icon {
+  font-size: 30px;
+  cursor: pointer;
+  color: #CA92FF;
+}
+.burger-menu__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+  flex-direction: column;
+}
+.burger-menu__item {
+  margin: 10px 0;
+}
+.burger-menu a {
+  color: #CA92FF;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.auth-container {
+  display: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 100%;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.auth-modal, .register-modal {
+  display: none;
+  background-color: #00050F;
+  color: #CA92FF;
+  padding: 20px;
+  border-radius: 10px;
+  width: 484px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.register-modal {
+  height: 548px;
+}
+
+.auth-modal input, .register-modal input {
+  width: 299px;
+  font-size: 25px;
+  padding-left: 23px;
+  height: 60px;
+  margin: 10px 0;
+  margin-left: 81px;
+  border: 2px solid #CA92FF;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #CA92FF;
+}
+
+.auth-modal h2, .register-modal h2 {
+  font-size: 25px;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.register-modal button {
+  width: 322px;
+  height: 58px;
+  background: transparent;
+  color: #716D84;
+  font-size: 20px;
+  border-color: #716D84;
+  margin-top: 10px;
+  margin-left: 81px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.auth-footer {
+  display: flex;
+  align-items: center;
+}
+
+.auth-footer input {
+  height: 34px;
+  width: 34px;
+}
+
+.auth-footer button {
+  height: 38px;
+  width: 146px;
+  background: transparent;
+  color: #716D84;
+  font-size: 20px;
+  border-color: #716D84;
+  margin-top: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.auth-footer label {
+  display: flex;
+  align-items: center;
+}
+
+.close-btn {
+  top: 10px;
+  right: 10px;
+  font-size: 34px;
+  cursor: pointer;
+  color: #CA92FF;
+}
+
+.auth-modal p, .register-modal p {
+  text-align: center;
+  font-size: 20px;
+}
+
+.auth-modal a, .register-modal a {
+  font-size: 20px;
+  margin-left: 20px;
+  text-decoration: underline;
+}
+
+.index-sec {
+  background: url("/GameZone/img/bckg.svg");
+  width: 1877px;
+  height: 890px;
+}
+.index-sec ::after {
+  content: "";
+  width: 1879px;
+  height: 6680px;
+  background-image: url("/GameZone/img/Главная.svg");
+  margin-top: 1000px;
+}
+
+.index {
+  padding-top: 443px;
+}
+.index__title {
+  margin-left: 180px;
+}
+.index__title__f-phr {
+  padding-top: 7px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: url("/GameZone/img/Vector9.svg");
+}
+.index__title__scnd-phr {
+  padding-left: 33px;
+  padding-right: 34px;
+  background: url("/img/Vector10.svg");
+  color: #E4C7FF;
+  margin-top: 10px;
+  margin-left: 171px;
+}
+
+.about__title {
+  margin-top: 155px;
+  margin-bottom: 30px;
+}
+.about__dscr {
+  display: flex;
+}
+.about__dscr__ls {
+  max-width: 616px;
+}
+.about__dscr__ls__text {
+  margin-top: 36px;
+  margin-right: 64px;
+  margin-bottom: 71px;
+  height: 395px;
+}
+.about__dscr__ls__btn {
+  padding: 17px 95px;
+  border: 1px solid #ca92ff;
+  border-radius: 10px;
+  width: 397px;
+  height: 76px;
+}
+
+.news__title {
+  margin-top: 256px;
+  margin-bottom: 55px;
+}
+.news__box {
+  display: flex;
+}
+.news__box__ls {
+  width: 620px;
+  height: 602px;
+}
+.news__box__ls__title {
+  text-align: center;
+  margin-top: 415px;
+  padding-top: 23px;
+  padding-bottom: 38px;
+  background: rgba(0, 8, 22, 0.69);
+  font-size: 25px;
+}
+.news__box__ls__dscr {
+  padding-left: 30px;
+  padding-bottom: 42px;
+  background: rgba(0, 8, 22, 0.69);
+  font-size: 25px;
+}
+.news__box__rs__partofnews {
+  display: flex;
+  flex-wrap: wrap;
+  width: 560px;
+  margin-bottom: 80px;
+}
+.news__box__rs__partofnews__news {
+  width: 264px;
+  height: 191px;
+  margin-left: 16px;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+.news__box__rs__partofnews__news__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  margin-top: 133px;
+  background: rgba(0, 8, 22, 0.69);
+  height: 59px;
+}
+.news__box__rs__btn {
+  padding: 17px 22px;
+  border: 1px solid #ca92ff;
+  border-radius: 10px;
+  margin-left: 120px;
+}
+
+.equipment__title {
+  margin-top: 199px;
+  margin-bottom: 60px;
+}
+.equipment__sl__btns {
+  display: flex;
+}
+.equipment__sl__btns__lb {
+  position: relative;
+  color: #f0dfff;
+  font-size: 35px;
+  z-index: 2;
+  padding: 30px 217px;
+  background-color: #00050F;
+  border-top: 3px solid rgba(202, 146, 255, 0.662745098);
+  border-left: 3px solid rgba(202, 146, 255, 0.662745098);
+  border-right: 3px solid rgba(202, 146, 255, 0.662745098);
+  border-bottom: 3px solid #00050F;
+  margin-bottom: -3px;
+}
+.equipment__sl__btns__rb {
+  position: relative;
+  color: #f0dfff;
+  font-size: 35px;
+  z-index: 2;
+  padding: 30px 314px;
+  background-color: #00050F;
+  border: none;
+}
+.equipment__sl__dscr {
+  border: 3px solid rgba(202, 146, 255, 0.65);
+  background: #00050f;
+  width: 1179px;
+  display: flex;
+  align-items: center;
+}
+.equipment__sl__dscr__img {
+  width: 425px;
+  height: 490px;
+  margin-top: 77px;
+  margin-left: 31px;
+  margin-right: 31px;
+  margin-bottom: 77px;
+}
+.equipment__sl__dscr__text__list {
+  width: 720px;
+  height: 490px;
+}
+.equipment__sl__dscr__text__list :first-child {
+  text-align: center;
+  font-size: 35px;
+}
+.equipment__sl__dscr__text__list__item {
+  margin-bottom: 25px;
+  font-size: 30px;
+  color: #e4c7ff;
+}
+
+.games__title {
+  margin-top: 110px;
+}
+.games__subtitle {
+  margin-top: 55px;
+  margin-bottom: 25px;
+}
+.games__topgames {
+  width: 1180px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 70px;
+}
+.games__topgames__game__title {
+  margin-top: 38px;
+  text-align: center;
+  color: #f0dfff;
+}
+.games__btn {
+  padding: 17px 60px;
+  border: 2px solid #ca92ff;
+  border-radius: 10px;
+  margin-left: 460px;
+  margin-bottom: 75px;
+}
+
+.tariffs__title {
+  margin-top: 125px;
+  margin-bottom: 70px;
+}
+.tariffs__ex {
+  background: #00050F;
+  width: 1180px;
+}
+.tariffs__ex__attributes {
+  margin-left: 330px;
+  display: flex;
+  padding-top: 22px;
+  padding-bottom: 10px;
+}
+.tariffs__ex__attributes p {
+  color: #f0dfff;
+}
+.tariffs__ex__attributes__title-1 {
+  margin-right: 175px;
+}
+.tariffs__ex__attributes__title-2 {
+  margin-right: 100px;
+}
+.tariffs__ex__attributes__title-3 {
+  margin-right: 95px;
+}
+.tariffs__ex__tarif {
+  display: flex;
+  align-items: center;
+  border-top: 2px solid #f0dfff;
+  width: 1123px;
+  margin-left: 28px;
+  margin-bottom: 44px;
+}
+.tariffs__ex__tarif__logo-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 45px;
+}
+.tariffs__ex__tarif__types {
+  padding-top: 44px;
+}
+.tariffs__ex__tarif__types__type__list {
+  font-size: 35px;
+  color: #f0dfff;
+  width: 816px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 44px;
+}
+.tariffs__ex__tarif__types__type__list__item {
+  width: 181px;
+}
+.tariffs__ex__tarif__types__type__list :nth-child(2) {
+  text-align: center;
+}
+.tariffs__ex__tarif__types__type__list :nth-child(3) {
+  text-align: center;
+}
+.tariffs__ex__tarif__types__type__list :nth-child(4) {
+  text-align: center;
+}
+.tariffs__btn {
+  border: 2px solid #ca92ff;
+  border-radius: 10px;
+  width: 337px;
+  height: 76px;
+  padding: 17px 27px;
+  margin-left: 430px;
+}
+
+.reserve__title {
+  margin-top: 150px;
+  margin-bottom: 90px;
+}
+.reserve__dscr {
+  margin-bottom: 50px;
+}
+.reserve__inputs {
+  display: flex;
+  width: 1180px;
+}
+.reserve__inputs__ls {
+  display: flex;
+  flex-direction: column;
+  margin-right: 83px;
+}
+.reserve__inputs__ls__name {
+  margin-bottom: 50px;
+}
+.reserve__inputs__dscr {
+  width: 660px;
+  height: 195px;
+}
+.reserve__btn {
+  background: #000816;
+  border: 2px solid #ca92ff;
+  border-radius: 10px;
+  width: 229px;
+  height: 76px;
+  font-size: 35px;
+  text-align: center;
+  color: #f0dfff;
+  padding: 17px 23px;
+  margin-top: 100px;
+  margin-left: 928px;
+}
+
+.footer {
+  background: #00050f;
+  padding-left: 350px;
+  margin-top: 180px;
+}
+.footer__ts {
+  display: flex;
+  padding-top: 44px;
+  margin-bottom: 20px;
+}
+.footer__ts__geo {
+  font-weight: 300;
+  font-size: 25px;
+  color: #f0dfff;
+  margin-left: 10px;
+  margin-right: 500px;
+}
+.footer__ts__number {
+  font-weight: 400;
+  font-size: 35px;
+  color: #f0dfff;
+}
+.footer__bs {
+  display: flex;
+  padding-bottom: 30px;
+}
+.footer__bs__copy {
+  font-weight: 300;
+  font-size: 25px;
+  color: #f0dfff;
+  margin-left: 10px;
+  margin-right: 628px;
+}
+
+@media screen and (width < 376px) {
+  h1 {
+    font-size: 35px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  p {
+    font-size: 10px;
+  }
+  .container {
+    max-width: 375px;
+  }
+  .nav-menu {
+    height: 70px;
+  }
+  .nav-menu__list {
+    display: none;
+  }
+  .burger-menu {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .index-sec {
+    width: 375px;
+    height: 600px;
+  }
+  .index-sec ::after {
+    content: none;
+  }
+  .index {
+    padding-top: 280px;
+  }
+  .index__title {
+    margin-left: 0px;
+    padding-top: 0px;
+  }
+  .index__title__scnd-phr {
+    background: url("/img/Vector10(1).svg");
+    margin-left: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .about__title {
+    margin-top: 30px;
+  }
+  .about__dscr {
+    flex-direction: column-reverse;
+  }
+  .about__dscr__ls__text {
+    text-align: justify;
+    font-size: 15px;
+    margin-top: 0px;
+    margin-right: 9px;
+    width: 300px;
+    height: 200px;
+    margin-bottom: 10px;
+  }
+  .about__dscr__ls__btn {
+    border-radius: 10px;
+    font-size: 25px;
+    padding: 5px 30px;
+    margin-left: 50px;
+  }
+  .about__dscr__img {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 10px;
+  }
+  .news {
+    width: 309px;
+  }
+  .news__title {
+    margin-top: 30px;
+  }
+  .news__box {
+    flex-direction: column;
+  }
+  .news__box__ls {
+    width: 300px;
+    height: 286px;
+    margin-bottom: 10px;
+  }
+  .news__box__ls__title {
+    font-size: 15px;
+    margin-top: 200px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .news__box__ls__dscr {
+    font-size: 10px;
+    padding-left: 10px;
+    padding-bottom: 25px;
+  }
+  .news__box__rs__partofnews {
+    width: 300px;
+    margin-bottom: 30px;
+  }
+  .news__box__rs__partofnews__news {
+    width: 140px;
+    height: 110px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 12px;
+  }
+  .news__box__rs__partofnews__news__title {
+    font-size: 10px;
+    margin-top: 80px;
+    height: 30px;
+  }
+  .news__box__rs__btn {
+    font-size: 25px;
+    padding: 5px 10px;
+    margin-left: 12px;
+    border-radius: 5px;
+  }
+  .equipment__title {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .equipment__sl__btns__lb {
+    font-size: 10px;
+    padding: 9px 65px;
+    border-top: 2px solid rgba(202, 146, 255, 0.662745098);
+    border-left: 2px solid rgba(202, 146, 255, 0.662745098);
+    border-right: 2px solid rgba(202, 146, 255, 0.662745098);
+    border-bottom: 2px solid #00050F;
+  }
+  .equipment__sl__btns__rb {
+    font-size: 10px;
+    padding: 9px 92px;
+  }
+  .equipment__sl__dscr {
+    border: 2px solid rgba(202, 146, 255, 0.65);
+    width: 353px;
+  }
+  .equipment__sl__dscr__img {
+    width: 127px;
+    height: 147px;
+    margin-top: 23px;
+    margin-left: 9px;
+    margin-right: 9px;
+    margin-bottom: 23px;
+  }
+  .equipment__sl__dscr__text__list {
+    width: 198px;
+    height: 125px;
+  }
+  .equipment__sl__dscr__text__list :first-child {
+    font-size: 15px;
+  }
+  .equipment__sl__dscr__text__list__item {
+    margin-bottom: 8px;
+    font-size: 10px;
+  }
+  .games__title {
+    margin-top: 30px;
+  }
+  .games__subtitle {
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .games__topgames {
+    width: 340px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 46px;
+  }
+  .games__topgames__game {
+    margin-bottom: 15px;
+  }
+  .games__topgames__game__img {
+    width: 138px;
+    height: 203px;
+  }
+  .games__topgames__game__title {
+    font-size: 15px;
+    margin-top: 14px;
+    text-align: center;
+    color: #f0dfff;
+  }
+  .games__btn {
+    font-size: 25px;
+    padding: 5px 30px;
+    border: 2px solid #ca92ff;
+    border-radius: 10px;
+    margin-left: 60px;
+  }
+  .tariffs__title {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .tariffs__ex {
+    margin-bottom: 30px;
+    width: 365px;
+  }
+  .tariffs__ex__attributes {
+    margin-left: 110px;
+    padding-top: 4px;
+    padding-bottom: 7px;
+  }
+  .tariffs__ex__attributes__title-1 {
+    margin-right: 48px;
+  }
+  .tariffs__ex__attributes__title-2 {
+    margin-right: 23px;
+  }
+  .tariffs__ex__attributes__title-3 {
+    margin-right: 25px;
+  }
+  .tariffs__ex__tarif {
+    width: 347px;
+    margin-left: 8px;
+    margin-bottom: 5px;
+  }
+  .tariffs__ex__tarif__logo-title {
+    margin-right: 20px;
+  }
+  .tariffs__ex__tarif__logo-title__img {
+    width: 66px;
+    height: 63px;
+  }
+  .tariffs__ex__tarif__logo-title__text {
+    font-size: 10px;
+  }
+  .tariffs__ex__tarif__types {
+    padding-top: 12px;
+  }
+  .tariffs__ex__tarif__types__type__list {
+    font-size: 10px;
+    color: #f0dfff;
+    width: 257px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  .tariffs__ex__tarif__types__type__list__item {
+    width: 52px;
+  }
+  .tariffs__btn {
+    font-size: 25px;
+    padding: 5px 30px;
+    margin-left: 50px;
+  }
+  .reserve__title {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .reserve__dscr {
+    margin-bottom: 30px;
+  }
+  .reserve__inputs {
+    display: flex;
+    flex-direction: column;
+    width: 267px;
+  }
+  .reserve__inputs__ls {
+    display: flex;
+    flex-direction: column;
+    margin-right: 0px;
+  }
+  .reserve__inputs__ls__name {
+    margin-bottom: 30px;
+  }
+  .reserve__inputs__dscr {
+    width: 267px;
+    height: 112px;
+  }
+  .reserve__btn {
+    font-size: 25px;
+    padding: 5px 10px;
+    margin-top: 0px;
+    margin-left: 40px;
+    width: 203px;
+    height: 43px;
+  }
+  textarea {
+    border-radius: 5px;
+    width: 267px;
+    font-size: 10px;
+    padding-top: 19px;
+    padding-left: 19px;
+    padding-bottom: 18px;
+    margin-bottom: 30px;
+  }
+  .footer {
+    background: #00050f;
+    padding-left: 0px;
+    margin-top: 30px;
+  }
+  .footer__ts {
+    display: flex;
+    padding-top: 44px;
+    margin-bottom: 20px;
+  }
+  .footer__ts__geo {
+    font-family: Geometria-light;
+    font-weight: 300;
+    font-size: 10px;
+    color: #f0dfff;
+    margin-left: 7px;
+    margin-right: 32px;
+  }
+  .footer__ts__number {
+    font-weight: 400;
+    font-size: 15px;
+    color: #f0dfff;
+  }
+  .footer__bs {
+    display: flex;
+    padding-bottom: 30px;
+  }
+  .footer__bs__copy {
+    font-family: Geometria-light;
+    font-weight: 300;
+    font-size: 10px;
+    color: #f0dfff;
+    margin-left: 19px;
+    margin-right: 100px;
+  }
+  .footer__bs img {
+    width: 28px;
+    height: 28px;
+  }
+}/*# sourceMappingURL=style.css.map */

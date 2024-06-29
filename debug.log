@@ -1,0 +1,28 @@
+Executing query: DELETE FROM  WHERE id='4'
+Executing query: DELETE FROM  WHERE id='2'
+Table: 
+ID: 4
+Executing query: DELETE FROM  WHERE id='4'
+Table: 
+ID: 
+Executing query: DELETE FROM  WHERE id=''
+Table: 
+ID: 
+Table: 
+ID: 
+Executing query: DELETE FROM  WHERE id=''
+Executing query: DELETE FROM  WHERE id=''
+Table: 
+ID: 
+Executing query: DELETE FROM  WHERE id=''
+Table: 
+ID: 
+Executing query: DELETE FROM  WHERE id=''
+Table: 
+ID: 
+ID Field: 
+Executing query: DELETE FROM  WHERE =''
+Table: 
+ID: 4
+ID Field: 
+Executing query: DELETE FROM  WHERE ='4'
